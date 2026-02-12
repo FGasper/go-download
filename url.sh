@@ -12,7 +12,7 @@ done
 
 full_list="$(curl 'https://go.dev/dl/?mode=json')"
 
-OS="$(uname -o | tr '[:upper:]' '[:lower:]')"
+OS="$(uname -o | tr '[:upper:]' '[:lower:]' | sed 's:^gnu/::')"
 ARCH="$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/')"
 
 filename=$(printf "%s" "$full_list" | jq -r ".[0].files[] | select(.kind==\"archive\" and .os==\"$OS\" and .arch==\"$ARCH\") | .filename")
