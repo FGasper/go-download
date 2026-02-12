@@ -8,6 +8,8 @@ To use:
 curl -fsSL https://raw.githubusercontent.com/FGasper/go-download/refs/heads/main/url.sh | sh | xargs curl -fsSL | tar -xvzf -
 ```
 
+(Besides `curl`, the script itself needs `jq` to run.)
+
 This will:
 - download `url.sh` & execeute it (without saving it to disk)
 - use the script’s output as an argument to `curl`
