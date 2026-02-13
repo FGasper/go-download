@@ -11,7 +11,7 @@ curl -fsSL https://raw.githubusercontent.com/FGasper/go-download/refs/heads/main
 (Besides `curl`, the script itself needs `jq` to run.)
 
 This will:
-- download `url.sh` & execeute it (without saving it to disk)
+- download `url.sh` & execute it (without saving it to disk)
 - use the script’s output as an argument to `curl`
   - This downloads the Go archive.
 - unpack the Go archive (itself not saved to disk) in the current directory
